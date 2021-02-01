@@ -1,0 +1,17 @@
+@import "_reset.scss";
+@import "_variables.scss";
+
+body {
+  background-color: $background;
+  width: 100vw;
+}
+
+h1 {
+  font-size: 5rem;
+  font-weight: 700;
+}
+
+img {
+  width: 30%;
+  height: 30%;
+}
