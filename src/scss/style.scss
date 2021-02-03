@@ -1,33 +1,29 @@
 @import "_reset.scss";
 @import "_variables.scss";
-@import url("https://fonts.googleapis.com/css2?family=Cormorant:ital@0;1&family=Playfair+Display:ital@0;1&display=swap");
+@import "_button.scss";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Cormorant:ital@0;1&family=Playfair+Display:ital@0;1&display=swap");
 
 body {
   background-color: $background;
   width: 100vw;
 }
 
-img {
-  width: 30%;
-  height: 30%;
-}
-
 header {
   width: 100%;
-  height: 15vh;
-  font-size: 16px;
-  background-color: #f3ede8;
+  height: 10vh;
+  font-size: 0.8rem;
+  z-index: 10;
+  background-color: white;
   position: sticky;
   top: 0;
   text-transform: uppercase;
-  font-family: "Cormorant", serif;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  font-family: "Montserrat";
   display: flex;
   justify-content: space-around;
   align-items: center;
   .header_column {
-    width: 13%;
-    height: 3vh;
+    width: 20%;
+    height: 4vh;
     &:nth-child(2) {
       background-color: burlywood;
       display: flex;
@@ -40,12 +36,62 @@ header {
       align-items: center;
       width: 100%;
       height: 100%;
-      a {
-        text-decoration: none;
-        color: black;
-        &:hover {
-          opacity: 0.5;
+      li {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a {
+          text-decoration: none;
+          color: black;
+          &:hover {
+            opacity: 0.5;
+          }
         }
+      }
+    }
+  }
+}
+
+section {
+  font-family: "Playfair Display";
+}
+
+.main-article {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  img {
+    width: 50%;
+    height: 100%;
+  }
+  .main-article_content {
+    background-color: $mainArticle;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    p {
+      width: 50%;
+      height: 30vh;
+      font-size: 2.3rem;
+      line-height: 1.3;
+      margin-bottom: 5vh;
+      text-align: center;
+      opacity: 0.7;
+    }
+    a {
+      @extend %mainButton;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      i {
+        width: 10%;
+        height: 100%;
+        display: inline-block;
       }
     }
   }
@@ -54,13 +100,10 @@ header {
 footer {
   width: 100%;
   height: 30vh;
-  font-size: 16px;
-  position: absolute;
-  bottom: 0;
+  font-size: 0.8rem;
   background-color: #f3ede8;
   text-transform: uppercase;
-  font-family: "Cormorant", serif;
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  font-family: "Montserrat";
   display: flex;
   justify-content: space-around;
   align-items: center;
